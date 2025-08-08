@@ -20,7 +20,7 @@ async def get_pokemon_info(pokemon_name: str) -> str:
         str: A string containing the Pokémon's name, ID, types,
             abilities, height, and weight.
     """
-    return tool_get_pokemon_info(pokemon_name)
+    return await tool_get_pokemon_info(pokemon_name)
 
 
 if __name__ == "__main__":
