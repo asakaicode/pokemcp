@@ -26,4 +26,4 @@ async def get_pokemon_info(pokemon_name: str) -> str:
             f"Weight: {data.get('weight')}"
         )
 
-    return {"content": content}
+    return content
