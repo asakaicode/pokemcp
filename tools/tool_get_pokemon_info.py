@@ -2,7 +2,7 @@ import httpx
 
 
 async def get_pokemon_info(pokemon_name: str) -> str:
-    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}"
+    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name}"
 
     async with httpx.AsyncClient() as client:
         response = await client.get(url)
