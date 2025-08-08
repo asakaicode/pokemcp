@@ -1,0 +1,15 @@
+{
+    // Enable formatting on save
+    "editor.formatOnSave": true,
+    // Use ruff for Python formatting and linting
+    "python.formatting.provider": "none",
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.ruffPath": "/Users/asahi/work/mcp-center/pokemcp/.venv/bin/ruff",
+    "python.linting.ruffArgs": [
+        "--fix"
+    ],
+    // Optionally disable other linters/formatters
+    "python.linting.flake8Enabled": false,
+    "python.formatting.blackEnabled": false
+}
