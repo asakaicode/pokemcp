@@ -15,7 +15,7 @@ async def get_pokemon_info(pokemon_name: str) -> str:
     except httpx.HTTPError as e:
         return f"HTTPエラーが発生しました: {str(e)}"
 
-    if response.status_code != 200:
+    if not (200 <= response.status_code < 300):
         content = f"Pokemon '{pokemon_name}' not found."
     else:
         data = response.json()
