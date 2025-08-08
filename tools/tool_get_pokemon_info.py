@@ -5,7 +5,15 @@ async def get_pokemon_info(pokemon_name: str) -> str:
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name}"
 
     async with httpx.AsyncClient() as client:
-        response = await client.get(url)
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, timeout=10.0)
+    except httpx.ConnectError:
+        return "ネットワーク接続エラーが発生しました。もう一度お試しください。"
+    except httpx.TimeoutException:
+        return "リクエストがタイムアウトしました。もう一度お試しください。"
+    except httpx.HTTPError as e:
+        return f"HTTPエラーが発生しました: {str(e)}"
 
     if response.status_code != 200:
         content = f"ポケモン『{pokemon_name}』は見つかりません。"
