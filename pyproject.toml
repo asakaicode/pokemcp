@@ -1,0 +1,18 @@
+[project]
+name = "pokemcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.12.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.0.281",
+]
+# Configuration for ruff formatter and linter
+[tool.ruff]
+line-length = 88

@@ -1,0 +1,7 @@
+{
+    // Recommended extensions for this project
+    "recommendations": [
+        "ms-python.python",
+        "charliermarsh.ruff"
+    ]
+}

@@ -1,0 +1,4 @@
+{
+    // Enable formatting on save
+    "editor.formatOnSave": true
+}
